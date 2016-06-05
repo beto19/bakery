@@ -1,0 +1,29 @@
+{include file='Admin/header.html'}
+
+<section id="login">
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+                <h1>Ingresar nueva Cuenta</h1>
+                    <form role="form" action="../Admin/clienteC.php" method="post" id="login-form" autocomplete="off" data-toggle="validator">
+                        <div class="form-group">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="email" name="email" id="email" class="form-control" placeholder="alguien@example.com" required>
+                        </div>
+                        <div class="checkbox">
+                            <span class="character-checkbox" onclick="showPassword()"></span>
+                            <span class="label">Show password</span>
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Enviar" 
+                        name="ingresar">
+                    </form>
+                    <hr>
+                    {include file='tablaMejorada.html'}
+        	    </div>
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
+
+{include file='Admin/footer.html'}

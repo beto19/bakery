@@ -1,0 +1,33 @@
+<page>
+              <h2>Productos</h2>
+              <table class="table table-striped">
+              <tr>
+                
+                  <th>Producto</th>
+                  <th>foto</th>
+                  <th>Precio</th>
+                  <th>Categoria</th>
+                  <th>Comprar</th>
+              </tr>
+              {foreach from=$datos item=conexion key=id}
+                  <tr>
+                    <td>
+                        {$conexion.producto}
+                    </td>
+                    <td>
+                        <img src='image/{$conexion.foto}' width='150'/>
+                    </td>
+                      <td>
+                        {$conexion.precio}
+                    </td>
+                    
+                    <td>
+                       {$conexion.categoria}
+                    </td>
+                    <td>
+                       <a href="descripcion.php?id_producto={$conexion.id_producto}"><span class="glyphicon glyphicon-tag"></span></a>
+                    </td>
+                  </tr>
+                  {/foreach}
+              </table>
+</page>

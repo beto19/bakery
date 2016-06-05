@@ -1,0 +1,32 @@
+<page>
+          	 	<table class="table table-striped">
+          	 	<tr>
+          	 		
+          		    <th>Producto</th>
+                  <th>foto</th>
+                  <th>Subtotal</th>
+                  <th>Cantidad</th>
+          		</tr>
+              {$suma=0}
+          		{foreach from=$dato item=conexion key=id}
+                  <tr>
+                    <td>
+                        {$conexion.producto}
+                    </td>
+                    <td>
+                        <img src='../image/{$conexion.foto}' width='150'/>
+                    </td>
+                      <td>
+                        {$conexion.precio}
+                    </td>
+                    
+                    <td>
+                       {$conexion.cantidad}
+                       {$suma=$suma+$conexion.cantidad}
+                    </td>
+                  </tr>
+                  {/foreach}
+          	 	</table>
+              <
+                 <h2>Total: ${$suma}</h2>
+</page>

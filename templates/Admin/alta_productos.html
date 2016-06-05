@@ -1,0 +1,41 @@
+{include file='Admin/header.html'}
+<section id="form">
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+                <h1>Actualizar producto</h1>
+                    <form role="form" action="../Admin/altaProductosC.php" method="post" id="login-form" autocomplete="off"
+                    enctype='multipart/form-data' accept-charset='utf-8'>
+                        <div class="form-group">
+                        {foreach from=$arreglo item=hugo key=llave}
+                            <label for="text" class="sr-only">Nombre</label>
+                            <input type="text" name="nombre" class="form-control"  value="{$hugo.producto}">
+                        
+                        <input type="hidden" name="id_producto" value="{$hugo.id_producto}"/>
+                        <input type="hidden" name="foto" value="{$hugo.foto}"/>
+                        </div>
+                        <div class="form-group">
+                            <label for="key" class="sr-only">Precio</label>
+                            <input type="text" name="precio" class="form-control" placeholder="precio del producto" value="{$hugo.precio}">
+                        </div>
+                        {/foreach}
+                        <div class="form-group">
+                            <label for="sel1">Foto:</label>
+                            <input type='file' name="foto">
+                        </div>
+                        <div class="form-group">
+                          <label for="comment">Descripción:</label>
+                          <textarea class="form-control" rows="5" id="comment" name="descripcion">{$hugo.descripcion}</textarea>
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Enviar" 
+                        name="ingresar">
+                    </form>
+                    <hr>
+                    {include file='tablaUsuarios.html'}
+        	    </div>
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
+{include file='Admin/footer.html'}

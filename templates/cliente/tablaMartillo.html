@@ -1,0 +1,33 @@
+<table class="table table-striped">
+      <tr>
+        {foreach $nombrescolumnas as $columna}
+          <th>{$columna}</th>
+        {/foreach}
+      </tr>
+    
+        
+          {foreach from=$dato item=conexion key=id}
+          <tr>
+              <td>
+                {$conexion.producto}
+            </td>
+            <td>
+                <img src='../image/{$conexion.foto}' width='150'/>
+            </td>
+              <td>
+                {$conexion.precio}
+            </td>
+            <td>
+                {$conexion.marca}
+            </td>
+            
+            <td>
+               <a href="../cliente/descripcionC.php?id={$conexion.id}">ver más</a>
+            </td>
+          </tr>
+          {/foreach}
+            
+      
+      
+     
+      </table>

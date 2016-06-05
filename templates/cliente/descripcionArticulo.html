@@ -1,0 +1,65 @@
+{include file='cliente/header.html'}
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-2">
+      
+      <h2>{$producto}</h2>
+    </div>
+
+    <div class="col-md-2">
+      <img src="../image/{$foto}" width="200" height="200" class="img-circle img-responsive">
+      <h3>${$precio}</h3>  
+    </div>
+
+    <div class="col-md-2">
+    </div>
+    
+    <form role="form" action="actualizaCarritoC.php" method="post"  autocomplete="on" enctype='multipart/form-data' accept-charset='utf-8'>  
+      <input type="hidden" name="id_producto" value="{$id_producto}">
+      
+      <div class="col-md-2">
+        <input type="text" placeholder="Cantidad a comprar" name='cantidad'></input>
+      </div>
+
+      <div class="col-md-2">
+        <input type="submit" value="Comprar" ></input>
+      </div>
+
+    </form>
+  </div>
+</div>
+<hr/>
+<div class="container-fluid" class="col-md-6">
+  <h1>Descripción</h1>
+  <br>
+  <p>{$descripcion}</p>
+</div>
+
+    </div>
+
+<hr/>
+<div class="container-fluid" class="col-md-6">
+  <h1>Comentarios</h1>
+  <table class="table table-striped">
+            {foreach from=$descripcionCliente item=conexion key=id}
+            <tr>
+               <td>
+                <h2>{$conexion.nombre}  {$conexion.apaterno}:<br/>{$conexion.comentario}</h2>
+              </td>
+            </tr>
+            {/foreach}
+  </table>
+</div>
+<div class="container-fluid" class="col-md-6">
+  <label>Deja un comentario</label>
+  <form role="form" action="insertaComentarioC.php" method="post"  autocomplete="on" enctype='multipart/form-data' accept-charset='utf-8'>  
+      <textarea rows="4" cols="50" name="Comentario"></textarea>
+      <input type="hidden" name="id_producto" value="{$id_producto}">
+      <input type="hidden" name="email" value="{$email}">
+</div>
+  <div class="container-fluid" >
+    <input type="submit" value="Enviar comentario" ></input>
+  </div>
+  </form>
+
+{include file='cliente/footer.html'}
