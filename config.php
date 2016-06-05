@@ -1,6 +1,6 @@
 <?php
 define('ZONA_HORARIA', 'Mexico/general');
-define('PATHAPP', '/var/www/html/bakery/');
+define('PATHAPP', 'dirname(__FILE__)./');
 define('LIB', 'lib/');
 define('TEMPLATES', 'templates/');
 define('TEMPLATES_C', 'templates_c/');
@@ -9,9 +9,9 @@ define('CONFIGS', 'configs/');
 #motor de bases de datos
 define('DB_DBMS','mysql');
 define('DB_HOST', 'localhost');
-define('DB_NAME', 'panaderia');
-define('DB_USER','panadero');
-define('DB_PASS', '1234');
+define('DB_NAME', 'php');
+define('DB_USER','admin2iAW58q');
+define('DB_PASS', 'ruBDNcCNkFU5');
 #variables de envio de correos
 //define('MAIL_HOST', true);
 define('MAIL_SMTPAUTH', true);
