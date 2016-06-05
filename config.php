@@ -19,7 +19,7 @@ define('MAIL_SMTPSECURE', 'ssl');
 define('MAIL_SMTPDEBUG', 0);
 define('MAIL_HOST', 'smtp.gmail.com');
 define('MAIL_USSERNAME', 'beto.tellez19@gmail.com');
-define('MAIL_PASSWORD', 'Frostbite2');
+define('MAIL_PASSWORD', '');
 define('MAIL_PORT', 465);
 
 ?>
