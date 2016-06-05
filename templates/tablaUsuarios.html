@@ -1,0 +1,39 @@
+<table class="table table-striped">
+  	 	<tr>
+  	 		{foreach $nombrescolumnas as $columna}
+  		    <th>{$columna}</th>
+			  {/foreach}
+        <th>Eliminar</th>
+        <th>Actualizar</th>
+	  	</tr>
+		
+   	    
+        	{foreach from=$dato item=conexion key=id}
+          <tr>
+         	 	<td>
+              	{$conexion.id_producto}
+          	</td>
+              <td>
+                {$conexion.producto}
+            </td>
+            <td>
+                <img src='../image/{$conexion.foto}' width='150'/>
+            </td>
+              <td>
+                {$conexion.precio}
+            </td>
+            
+            <td>
+               <a href="../Admin/bajaProductosC.php?id_producto={$conexion.id_producto}"><span class="glyphicon glyphicon-thumbs-down"></span></a>
+            </td>
+            <td>
+               <a href="../Admin/altaProductosC.php?id_producto={$conexion.id_producto}"><span class="glyphicon glyphicon-pencil"></span></a>
+            </td>
+          </tr>
+        	{/foreach}
+            
+   		
+    	
+     
+  	 	</table>
+  

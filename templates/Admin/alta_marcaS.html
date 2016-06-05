@@ -1,0 +1,24 @@
+{include file='Admin/header.html'}
+<section id="form">
+    <div class="container">
+    	<div class="row">
+    	    <div class="col-xs-12">
+        	    <div class="form-wrap">
+                <h1>Actualizar Categoria</h1>
+                    <form role="form" action="../Admin/altaMarcaC.php" method="post" id="form" autocomplete="off">
+                        <div class="form-group">
+                            <label for="text" class="sr-only">Nombre</label>
+                            <input type="text" name="categoria" class="form-control" placeholder="Nombre de la marca" value="{$nombre}">
+                            <input type="hidden" value="{$id_marca}" name="id_marca"></input>
+                        </div>
+                        <input type="submit" id="btn-login" class="btn btn-custom btn-lg btn-block" value="Enviar" 
+                        name="ingresar">
+                    </form>
+                    <hr>
+                    {include file='tablaCategoria.html'}
+        	    </div>
+    		</div> <!-- /.col-xs-12 -->
+    	</div> <!-- /.row -->
+    </div> <!-- /.container -->
+</section>
+{include file='Admin/footer.html'}

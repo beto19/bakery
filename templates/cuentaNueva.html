@@ -1,0 +1,64 @@
+{include file='header.html'}
+<div class="container">
+      <div class="row">
+          <div class="col-xs-12">
+              <div class="form-wrap" method='post' enctype='multipart/form-data' accept-charset='utf-8' id="formularioValidate"  data-toggle="validator">
+                 <h1>Creación de cuenta</h1>
+                <form role="form" action='cuenta.php' method='post' enctype='multipart/form-data' accept-charset='utf-8'>
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="ejemplo_email_1"
+                           placeholder="Introduce tu email"
+                           name="email" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Contraseña" minlength="8"  
+                           name="contrasena1" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Contraseña</label>
+                    <input type="password" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Repite la contraseña"
+                           name="contrasena2" minlength="8" required>
+                  </div>
+                  <hr/>
+                  <h1>Datos Personales</h1>
+                  <div class="form-group">
+                    <label>Nombres</label>
+                    <input type="text" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Nombre/s"
+                           name="nombre" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Apellido paterno</label>
+                    <input type="text" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Apellido paterno"
+                           name="apaterno" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Apellido materno</label>
+                    <input type="text" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Apellido materno"
+                           name="amaterno" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Fecha de nacimiento</label>
+                    <input type="text" class="form-control" id="ejemplo_password_1" 
+                           placeholder="aaaa/mm/dd"
+                           name="nacimiento" required>
+                  </div>
+                  <div class="form-group">
+                    <label>Dirección</label>
+                    <input type="text" class="form-control" id="ejemplo_password_1" 
+                           placeholder="Domicilio"
+                           name="domicilio" required>
+                  </div>
+                  <button type="submit" class="btn btn-default">Enviar</button>
+                </form>
+              </div>
+          </div>
+      </div>
+</div>
+{include file='footer.html'}

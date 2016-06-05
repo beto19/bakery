@@ -1,0 +1,12 @@
+{include file='cliente/header.html'}
+    <div >
+    	<form action="../cliente/compraCarritoC.php" method="post">
+            {include file='cliente/tablaCarrito.html'}
+        	<input id='botonVender' type='submit' value='Comprar' class="btn btn-info" name="botonVender" />
+        </form>
+        <form action="../cliente/borrarCarritoC.php" method="post">
+        	<input id='botonEliminar' type='submit' value='Eliminar carrito' class="btn btn-danger "
+    	    name="botonEliminar" />
+    	</form>
+    </div>
+{include file='cliente/footer.html'}
