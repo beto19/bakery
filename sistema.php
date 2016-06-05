@@ -1,5 +1,5 @@
 <?php
-include('config2.php');
+include('config.php');
 //definimos las rutas absoultas
 //define('PATHAPP','/var/www/html/ferreweb/');//define una constante
 define('PATHLIB',PATHAPP . LIB);
